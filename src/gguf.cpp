@@ -77,11 +77,6 @@ const TypeInfo* type_info(std::uint32_t raw) noexcept {
     return type_info(static_cast<GgmlType>(raw));
 }
 
-// ================================================================= Reader ===
-// Bounds-checked cursor over the mapped bytes. Every read validates that the
-// bytes exist, so a truncated or hostile file raises GgufError instead of
-// reading out of bounds.
-
 namespace {
 
 class Reader {
